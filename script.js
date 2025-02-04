@@ -57,14 +57,26 @@ const students = [
 // })
 
 //------- 3 Extra task 1 - add classList------
+// students.forEach((student) => {
+//   const studentDiv = document.createElement("div");
+//   // studentDiv.textContent = student.name + ', Alder: ' + student.age + ', Uddannelse: ' + student.course;
+
+//   studentDiv.textContent = `${student.name}, Alder: ${student.age}, Uddannelse: ${student.course}`;
+//   studentDiv.classList.add("student")
+//   studentListDiv.append(studentDiv);
+
+// })
+
+//------- 3 Extra task 2 - add <h2> and <p> ------
 students.forEach((student) => {
   const studentDiv = document.createElement("div");
-  // studentDiv.textContent = student.name + ', Alder: ' + student.age + ', Uddannelse: ' + student.course;
-
-  studentDiv.textContent = `${student.name}, Alder: ${student.age}, Uddannelse: ${student.course}`;
-  studentDiv.classList.add("student")
-  studentListDiv.append(studentDiv);
-
+  studentDiv.classList.add("student");
+  const studentHeadLine = document.createElement("h2");
+  studentHeadLine.textContent = student.name;
+  const studentInfo = document.createElement("p");
+  studentInfo.textContent = `Alder: ${student.age}, Uddannelse: ${student.course}`;
+  studentListDiv.append(studentHeadLine, studentInfo);
+  studentListDiv.appendChild(studentDiv)
 })
 
 
