@@ -48,11 +48,23 @@ const students = [
   { name: "Emil", age: 28, course: "Teknisk designer"}
 ]
 
+// students.forEach((student) => {
+//   const studentDiv = document.createElement("div");
+//   // studentDiv.textContent = student.name + ', Alder: ' + student.age + ', Uddannelse: ' + student.course;
+
+//   studentDiv.textContent = `${student.name}, Alder: ${student.age}, Uddannelse: ${student.course}`;
+//   studentListDiv.append(studentDiv);
+// })
+
+//------- 3 Extra task 1 - add classList------
 students.forEach((student) => {
   const studentDiv = document.createElement("div");
   // studentDiv.textContent = student.name + ', Alder: ' + student.age + ', Uddannelse: ' + student.course;
 
   studentDiv.textContent = `${student.name}, Alder: ${student.age}, Uddannelse: ${student.course}`;
+  studentDiv.classList.add("student")
   studentListDiv.append(studentDiv);
+
 })
+
 
