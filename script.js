@@ -15,24 +15,44 @@
 
 //------------ Opgave 2------------
 
-const myObject = {
-  name: "Object",
-  id: 101,
-  isColor: false,
-  objectitems: ["Read", "Write", "Exam", "Pass"],
-  place: {
-    street: "Vestre Kvartregade",
-    city:"Copenhagen",
-    country: "Denmark"
-  }
-}
+// const myObject = {
+//   name: "Object",
+//   id: 101,
+//   isColor: false,
+//   objectitems: ["Read", "Write", "Exam", "Pass"],
+//   place: {
+//     street: "Vestre Kvartregade",
+//     city:"Copenhagen",
+//     country: "Denmark"
+//   }
+// }
 
-//-- Output for array ----------
+// //-- Output for array ----------
 
-myObject.objectitems.forEach(item => console.log(item))
+// myObject.objectitems.forEach(item => console.log(item))
 
-//------- Output for object -----------
+// //------- Output for object -----------
 
-console.log(myObject.place.city);
-console.log(myObject.place["country"]);
+// console.log(myObject.place.city);
+// console.log(myObject.place["country"]);
+
+
+
+//--------------- Object Opgave 3 -----------
+
+const studentListDiv = document.querySelector(".creatElemt");
+
+const students = [
+  { name: "Sofie", age: 25, course: "Webudvikler"},
+  { name: "Lukas", age: 22, course: "Mediegrafiker"},
+  { name: "Emil", age: 28, course: "Teknisk designer"}
+]
+
+students.forEach((student) => {
+  const studentDiv = document.createElement("div");
+  // studentDiv.textContent = student.name + ', Alder: ' + student.age + ', Uddannelse: ' + student.course;
+
+  studentDiv.textContent = `${student.name}, Alder: ${student.age}, Uddannelse: ${student.course}`;
+  studentListDiv.append(studentDiv);
+})
 
