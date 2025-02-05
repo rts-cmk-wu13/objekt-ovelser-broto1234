@@ -71,12 +71,14 @@ const students = [
 students.forEach((student) => {
   const studentDiv = document.createElement("div");
   studentDiv.classList.add("student");
+
   const studentHeadLine = document.createElement("h2");
   studentHeadLine.textContent = student.name;
+
   const studentInfo = document.createElement("p");
   studentInfo.textContent = `Alder: ${student.age}, Uddannelse: ${student.course}`;
-  studentListDiv.append(studentHeadLine, studentInfo);
-  studentListDiv.appendChild(studentDiv)
+  studentDiv.append(studentHeadLine, studentInfo);
+  studentListDiv.append(studentDiv)
 })
 
 
